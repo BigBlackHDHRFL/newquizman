@@ -1,0 +1,1543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Law Enforcement Final Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question-block { margin-bottom: 25px; }
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .explanation { display: none; margin-top: 5px; }
+        button { margin-top: 10px; }
+    </style>
+    <script>
+        function checkAnswer(qNum, correct) {
+            var selected = document.querySelector('input[name="q' + qNum + '"]:checked');
+            var explanation = document.getElementById('exp' + qNum);
+            if (!selected) {
+                alert("Please select an answer for Question " + qNum);
+                return;
+            }
+            var allOptions = document.getElementsByName("q" + qNum);
+            allOptions.forEach(opt => {
+                var label = document.getElementById("label_" + qNum + "_" + opt.value);
+                if (opt.value === correct) {
+                    label.classList.add("correct");
+                } else {
+                    label.classList.remove("correct");
+                    if (opt.checked) {
+                        label.classList.add("incorrect");
+                    }
+                }
+            });
+            explanation.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Law Enforcement Final Quiz (180 Questions)</h1>
+    
+    <div class="question-block">
+        <p><strong>Question 1:</strong> Define criminal investigation.</p>
+        <label id="label_1_A"><input type="radio" name="q1" value="A"> A. A criminal investigation is the process of legally gathering evidence of a crime that has been or is being committed.</label><br>
+        <label id="label_1_B"><input type="radio" name="q1" value="B"> B. A criminal investigation is the process of legally gathering instruments of a crime that has been or is being committed.</label><br>
+        <label id="label_1_C"><input type="radio" name="q1" value="C"> C. A criminal investigation is the process of legally gathering witnesses of a crime that has been or is being committed.</label><br>
+        <label id="label_1_D"><input type="radio" name="q1" value="D"> D. A criminal investigation is the process of gathering evidence of a crime that has been or is being committed.</label><br>
+        <button onclick="checkAnswer('1', 'A')">Check Answer</button>
+        <div id="exp1" class="explanation"><strong>Explanation:</strong> A criminal investigation is the legal gathering of evidence related to a crime. [Criminal Investigations §32.1]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 2:</strong> _______ means the human kidney, liver, heart, lung, pancreas, eye, bone, skin, fetal tissue, or any other human organ or tissue.</p>
+        <label id="label_2_A"><input type="radio" name="q2" value="A"> A. Human tissue</label><br>
+        <label id="label_2_B"><input type="radio" name="q2" value="B"> B. Human parts</label><br>
+        <label id="label_2_C"><input type="radio" name="q2" value="C"> C. Human organ</label><br>
+        <label id="label_2_D"><input type="radio" name="q2" value="D"> D. Cadaver</label><br>
+        <button onclick="checkAnswer('2', 'C')">Check Answer</button>
+        <div id="exp2" class="explanation"><strong>Explanation:</strong> ‘Human organ’ includes major organs and tissues. [Criminal Investigations §32]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 3:</strong> Not based on actual personal knowledge or observation of the facts in controversy, but of other facts from which deductions are drawn, showing indirectly the facts sought to be proved.</p>
+        <label id="label_3_A"><input type="radio" name="q3" value="A"> A. Circumstantial Evidence</label><br>
+        <label id="label_3_B"><input type="radio" name="q3" value="B"> B. Elements of Evidence</label><br>
+        <label id="label_3_C"><input type="radio" name="q3" value="C"> C. Proven Evidence</label><br>
+        <label id="label_3_D"><input type="radio" name="q3" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('3', 'A')">Check Answer</button>
+        <div id="exp3" class="explanation"><strong>Explanation:</strong> Circumstantial evidence proves facts indirectly. [Criminal Investigations – Evidence Definitions]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 4:</strong> Literally means the body or substance of the crime. In law the term refers to proof establishing that a crime has occurred; the necessary elements that constitute a crime.</p>
+        <label id="label_4_A"><input type="radio" name="q4" value="A"> A. Habeus Corpus</label><br>
+        <label id="label_4_B"><input type="radio" name="q4" value="B"> B. Corpus delicti</label><br>
+        <label id="label_4_C"><input type="radio" name="q4" value="C"> C. Modus Operandi</label><br>
+        <label id="label_4_D"><input type="radio" name="q4" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('4', 'B')">Check Answer</button>
+        <div id="exp4" class="explanation"><strong>Explanation:</strong> ‘Corpus delicti’ means body of the crime — it proves a crime occurred. [Criminal Investigations – §32]<br>Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 5:</strong> A criminal’s characteristic method of operation means ____________?</p>
+        <label id="label_5_A"><input type="radio" name="q5" value="A"> A. Criminal preference</label><br>
+        <label id="label_5_B"><input type="radio" name="q5" value="B"> B. Modus Delecti</label><br>
+        <label id="label_5_C"><input type="radio" name="q5" value="C"> C. Modus Operandi</label><br>
+        <label id="label_5_D"><input type="radio" name="q5" value="D"> D. Criminal Skill</label><br>
+        <button onclick="checkAnswer('5', 'C')">Check Answer</button>
+        <div id="exp5" class="explanation"><strong>Explanation:</strong> ‘Modus Operandi’ is the characteristic method of operation of a criminal. [Criminal Investigations §32]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 6:</strong> On-the-scene identification of a suspect by the victim of or witness to a crime, conducted within minutes of the commission of a crime means?</p>
+        <label id="label_6_A"><input type="radio" name="q6" value="A"> A. Canvass</label><br>
+        <label id="label_6_B"><input type="radio" name="q6" value="B"> B. Suspect Identification</label><br>
+        <label id="label_6_C"><input type="radio" name="q6" value="C"> C. Witness Identification</label><br>
+        <label id="label_6_D"><input type="radio" name="q6" value="D"> D. Field Identification</label><br>
+        <button onclick="checkAnswer('6', 'D')">Check Answer</button>
+        <div id="exp6" class="explanation"><strong>Explanation:</strong> Field Identification is done on-scene minutes after the crime. [Criminal Investigations – Field Identification]<br>Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 7:</strong> A legal narrative description of events related to a crime means?</p>
+        <label id="label_7_A"><input type="radio" name="q7" value="A"> A. Statement</label><br>
+        <label id="label_7_B"><input type="radio" name="q7" value="B"> B. Witness</label><br>
+        <label id="label_7_C"><input type="radio" name="q7" value="C"> C. Police report</label><br>
+        <label id="label_7_D"><input type="radio" name="q7" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('7', 'C')">Check Answer</button>
+        <div id="exp7" class="explanation"><strong>Explanation:</strong> A police report is a legal narrative of crime events. [Criminal Investigations – Reports]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 8:</strong> Identify the tools of the criminal investigator.</p>
+        <label id="label_8_A"><input type="radio" name="q8" value="A"> A. Information</label><br>
+        <label id="label_8_B"><input type="radio" name="q8" value="B"> B. Interviewing</label><br>
+        <label id="label_8_C"><input type="radio" name="q8" value="C"> C. Laws of arrest, search, and seizure</label><br>
+        <label id="label_8_D"><input type="radio" name="q8" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('8', 'D')">Check Answer</button>
+        <div id="exp8" class="explanation"><strong>Explanation:</strong> Tools of investigation include information, interviewing, and legal knowledge. [Criminal Investigations §32.2]<br>Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 9:</strong> Pick the least correct goal of a criminal investigation.</p>
+        <label id="label_9_A"><input type="radio" name="q9" value="A"> A. To determine if a crime has been committed.</label><br>
+        <label id="label_9_B"><input type="radio" name="q9" value="B"> B. To legally obtain information and evidence to identify the person(s) responsible for committing the crime.</label><br>
+        <label id="label_9_C"><input type="radio" name="q9" value="C"> C. To illegally arrest the suspect(s).</label><br>
+        <label id="label_9_D"><input type="radio" name="q9" value="D"> D. To recover all stolen property.
+E. To present the best case possible to the prosecutor.</label><br>
+        <button onclick="checkAnswer('9', 'C')">Check Answer</button>
+        <div id="exp9" class="explanation"><strong>Explanation:</strong> Illegally arresting suspects is not a valid goal of investigation. [Criminal Investigations §32.3]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 10:</strong> The basic task of a criminal investigation is to determine the _____.</p>
+        <label id="label_10_A"><input type="radio" name="q10" value="A"> A. crime</label><br>
+        <label id="label_10_B"><input type="radio" name="q10" value="B"> B. motive</label><br>
+        <label id="label_10_C"><input type="radio" name="q10" value="C"> C. truth</label><br>
+        <label id="label_10_D"><input type="radio" name="q10" value="D"> D. location</label><br>
+        <button onclick="checkAnswer('10', 'C')">Check Answer</button>
+        <div id="exp10" class="explanation"><strong>Explanation:</strong> The basic task is to find the truth. [Criminal Investigations §32.3]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 11:</strong> The legal significance of evidence rests in its influence on the ________________.</p>
+        <label id="label_11_A"><input type="radio" name="q11" value="A"> A. prosecutor</label><br>
+        <label id="label_11_B"><input type="radio" name="q11" value="B"> B. judge or juror</label><br>
+        <label id="label_11_C"><input type="radio" name="q11" value="C"> C. defense attorney</label><br>
+        <label id="label_11_D"><input type="radio" name="q11" value="D"> D. All of these</label><br>
+        <button onclick="checkAnswer('11', 'B')">Check Answer</button>
+        <div id="exp11" class="explanation"><strong>Explanation:</strong> Evidence matters for influencing a judge or jury. [Criminal Investigations – Evidence]<br>Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 12:</strong> The investigator shall collect _______________ of an accused person's guilt to negate the defense's claims.</p>
+        <label id="label_12_A"><input type="radio" name="q12" value="A"> A. real evidence</label><br>
+        <label id="label_12_B"><input type="radio" name="q12" value="B"> B. evidence</label><br>
+        <label id="label_12_C"><input type="radio" name="q12" value="C"> C. corroborating evidence</label><br>
+        <label id="label_12_D"><input type="radio" name="q12" value="D"> D. physical evidence</label><br>
+        <button onclick="checkAnswer('12', 'C')">Check Answer</button>
+        <div id="exp12" class="explanation"><strong>Explanation:</strong> Corroborating evidence supports guilt beyond doubt. [Criminal Investigations – Burden of Proof]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 13:</strong> What are characteristics of a criminal investigator?</p>
+        <label id="label_13_A"><input type="radio" name="q13" value="A"> A. Suspicious</label><br>
+        <label id="label_13_B"><input type="radio" name="q13" value="B"> B. Curious</label><br>
+        <label id="label_13_C"><input type="radio" name="q13" value="C"> C. Observant</label><br>
+        <label id="label_13_D"><input type="radio" name="q13" value="D"> D. All of these</label><br>
+        <button onclick="checkAnswer('13', 'D')">Check Answer</button>
+        <div id="exp13" class="explanation"><strong>Explanation:</strong> Good investigators are curious, observant, and suspicious. [Criminal Investigations – Investigator Characteristics]<br>Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 14:</strong> What are characteristics of a criminal investigator?</p>
+        <label id="label_14_A"><input type="radio" name="q14" value="A"> A. Develops rapport through interpersonal communication skills</label><br>
+        <label id="label_14_B"><input type="radio" name="q14" value="B"> B. Logical thinking</label><br>
+        <label id="label_14_C"><input type="radio" name="q14" value="C"> C. Creative problem solving</label><br>
+        <label id="label_14_D"><input type="radio" name="q14" value="D"> D. All of these</label><br>
+        <button onclick="checkAnswer('14', 'D')">Check Answer</button>
+        <div id="exp14" class="explanation"><strong>Explanation:</strong> They must also use rapport, logic, and creativity. [Criminal Investigations – Investigator Characteristics]<br>Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 15:</strong> Criminal investigators must strive for __________ when conducting any investigation.</p>
+        <label id="label_15_A"><input type="radio" name="q15" value="A"> A. fairness</label><br>
+        <label id="label_15_B"><input type="radio" name="q15" value="B"> B. impartiality</label><br>
+        <label id="label_15_C"><input type="radio" name="q15" value="C"> C. objectivity</label><br>
+        <label id="label_15_D"><input type="radio" name="q15" value="D"> D. honesty</label><br>
+        <button onclick="checkAnswer('15', 'C')">Check Answer</button>
+        <div id="exp15" class="explanation"><strong>Explanation:</strong> Investigators must stay objective to maintain fairness. [Criminal Investigations – Ethics]<br>Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 16:</strong> Profit still underlying motive, but this type may be more interested in getting money for drugs is an example of?</p>
+        <label id="label_16_A"><input type="radio" name="q16" value="A"> A. Professional thief</label><br>
+        <label id="label_16_B"><input type="radio" name="q16" value="B"> B. None of the above</label><br>
+        <label id="label_16_C"><input type="radio" name="q16" value="C"> C. Burglar</label><br>
+        <label id="label_16_D"><input type="radio" name="q16" value="D"> D. Semi-professional (unskilled) thief</label><br>
+        <button onclick="checkAnswer('16', 'D')">Check Answer</button>
+        <div id="exp16" class="explanation"><strong>Explanation:</strong> Semi-professional thieves often seek drug money. [Criminal Investigations §32.7]<br>Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 17:</strong> Presents a special danger when interrupted and cornered. More prone to violence to try to effect escape. Less rational than "professional" counterpart.</p>
+        <label id="label_17_A"><input type="radio" name="q17" value="A"> A. Semi-professional (unskilled) thief</label><br>
+        <label id="label_17_B"><input type="radio" name="q17" value="B"> B. Semi-unprofessional (unskilled) thief</label><br>
+        <label id="label_17_C"><input type="radio" name="q17" value="C"> C. Semi-professional (unskilled) criminal</label><br>
+        <label id="label_17_D"><input type="radio" name="q17" value="D"> D. Semi-professional (skilled) thief</label><br>
+        <button onclick="checkAnswer('17', 'A')">Check Answer</button>
+        <div id="exp17" class="explanation"><strong>Explanation:</strong> They are more violent when cornered than professionals. [Criminal Investigations §32.7]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 18:</strong> residential premises, safe burglary, commercial premises, vehicle – These are characteristics of?</p>
+        <label id="label_18_A"><input type="radio" name="q18" value="A"> A. Burglar</label><br>
+        <label id="label_18_B"><input type="radio" name="q18" value="B"> B. Professional Burglar</label><br>
+        <label id="label_18_C"><input type="radio" name="q18" value="C"> C. Skilled Burglar</label><br>
+        <label id="label_18_D"><input type="radio" name="q18" value="D"> D. None of the above</label><br>
+        <button onclick="checkAnswer('18', 'A')">Check Answer</button>
+        <div id="exp18" class="explanation"><strong>Explanation:</strong> Burglars target homes, safes, businesses, and vehicles. [Criminal Investigations §32.7]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 19:</strong> Based on promises of unusual return i.e., something for nothing, double your money, etc. Often use victims’ own greed, assuring them risks are minimal is an example of?</p>
+        <label id="label_19_A"><input type="radio" name="q19" value="A"> A. Con Artists and Con Games or Schemes</label><br>
+        <label id="label_19_B"><input type="radio" name="q19" value="B"> B. Con Artists and Con Games or Trickery</label><br>
+        <label id="label_19_C"><input type="radio" name="q19" value="C"> C. Con Artists and sleight of hand Games or Schemes</label><br>
+        <label id="label_19_D"><input type="radio" name="q19" value="D"> D. Con Artists and Con Card Games or Schemes</label><br>
+        <button onclick="checkAnswer('19', 'A')">Check Answer</button>
+        <div id="exp19" class="explanation"><strong>Explanation:</strong> Con artists use greed and false promises. [Criminal Investigations §32.7]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 20:</strong> Con Artists often prey on ___________.</p>
+        <label id="label_20_A"><input type="radio" name="q20" value="A"> A. elderly</label><br>
+        <label id="label_20_B"><input type="radio" name="q20" value="B"> B. women</label><br>
+        <label id="label_20_C"><input type="radio" name="q20" value="C"> C. men</label><br>
+        <label id="label_20_D"><input type="radio" name="q20" value="D"> D. children</label><br>
+        <button onclick="checkAnswer('20', 'A')">Check Answer</button>
+        <div id="exp20" class="explanation"><strong>Explanation:</strong> They often target the elderly due to vulnerability. [Criminal Investigations §32.7]<br>Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 21:</strong> Street thieves often carry weapons and take reckless chances to avoid apprehension. This is a characteristic of:</p>
+        <label id="label_21_A"><input type="radio" name="q21" value="A"> A. Professional car thief</label><br>
+        <label id="label_21_B"><input type="radio" name="q21" value="B"> B. Street thief</label><br>
+        <label id="label_21_C"><input type="radio" name="q21" value="C"> C. White collar criminal</label><br>
+        <label id="label_21_D"><input type="radio" name="q21" value="D"> D. Burglar</label><br>
+        <button onclick="checkAnswer('21', 'B')">Check Answer</button>
+        <div id="exp21" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 22:</strong> The ____ professional thief will rarely be armed since he would get more time for a weapon charge than the theft charge.</p>
+        <label id="label_22_A"><input type="radio" name="q22" value="A"> A. violent</label><br>
+        <label id="label_22_B"><input type="radio" name="q22" value="B"> B. common</label><br>
+        <label id="label_22_C"><input type="radio" name="q22" value="C"> C. habitual</label><br>
+        <label id="label_22_D"><input type="radio" name="q22" value="D"> D. truly</label><br>
+        <button onclick="checkAnswer('22', 'D')">Check Answer</button>
+        <div id="exp22" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 23:</strong> Described as the altering of a vehicle's identity by placing the serial number of a total loss car onto a stolen car.</p>
+        <label id="label_23_A"><input type="radio" name="q23" value="A"> A. Title Switch</label><br>
+        <label id="label_23_B"><input type="radio" name="q23" value="B"> B. Salvage Switch</label><br>
+        <label id="label_23_C"><input type="radio" name="q23" value="C"> C. Vehicle Freshening</label><br>
+        <label id="label_23_D"><input type="radio" name="q23" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('23', 'B')">Check Answer</button>
+        <div id="exp23" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 24:</strong> A "junk" salvage title is:</p>
+        <label id="label_24_A"><input type="radio" name="q24" value="A"> A. a vehicle in a junk yard</label><br>
+        <label id="label_24_B"><input type="radio" name="q24" value="B"> B. in process of new title</label><br>
+        <label id="label_24_C"><input type="radio" name="q24" value="C"> C. a vehicle that should not be on the road</label><br>
+        <label id="label_24_D"><input type="radio" name="q24" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('24', 'C')">Check Answer</button>
+        <div id="exp24" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 25:</strong> Many rental companies have trouble keeping track of the large inventory of vehicles they rent.</p>
+        <label id="label_25_A"><input type="radio" name="q25" value="A"> A. True</label><br>
+        <label id="label_25_B"><input type="radio" name="q25" value="B"> B. False
+Correct Answer: A
+Source: 32. Criminal Investigations.pdf – Auto Theft & Rentals
+
+Question 26:
+Car rental agencies have some problems when it comes to civil vs. criminal actions. Which is NOT a problem?
+A. The vehicle is not reported stolen through the computer.
+B. Companies lose inventory control.</label><br>
+        <label id="label_25_C"><input type="radio" name="q25" value="C"> C. A vehicle may be missing from inventory for months.</label><br>
+        <label id="label_25_D"><input type="radio" name="q25" value="D"> D. Rental contract clearly shows car is out of state legally.</label><br>
+        <button onclick="checkAnswer('25', 'D')">Check Answer</button>
+        <div id="exp25" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 27:</strong> In auto theft cases, an officer can check with any ________ to determine if vehicle was repossessed.</p>
+        <label id="label_27_A"><input type="radio" name="q27" value="A"> A. lien holder</label><br>
+        <label id="label_27_B"><input type="radio" name="q27" value="B"> B. registered owner</label><br>
+        <label id="label_27_C"><input type="radio" name="q27" value="C"> C. towing company</label><br>
+        <label id="label_27_D"><input type="radio" name="q27" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('27', 'A')">Check Answer</button>
+        <div id="exp27" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 28:</strong> Which is one of the nine categories of homicide?</p>
+        <label id="label_28_A"><input type="radio" name="q28" value="A"> A. Revenge or jealousy killing</label><br>
+        <label id="label_28_B"><input type="radio" name="q28" value="B"> B. Anger killing</label><br>
+        <label id="label_28_C"><input type="radio" name="q28" value="C"> C. Felony murder</label><br>
+        <label id="label_28_D"><input type="radio" name="q28" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('28', 'D')">Check Answer</button>
+        <div id="exp28" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 29:</strong> Sex Offender Registration can be found in?</p>
+        <label id="label_29_A"><input type="radio" name="q29" value="A"> A. CCP Chapter 62.051 Registration(a)</label><br>
+        <label id="label_29_B"><input type="radio" name="q29" value="B"> B. PC 62.03 Registration</label><br>
+        <label id="label_29_C"><input type="radio" name="q29" value="C"> C. PC 62.04 Registration</label><br>
+        <label id="label_29_D"><input type="radio" name="q29" value="D"> D. PC 62.05 Registration</label><br>
+        <button onclick="checkAnswer('29', 'A')">Check Answer</button>
+        <div id="exp29" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 30:</strong> Sexual assaults are covered in the Penal Code under:</p>
+        <label id="label_30_A"><input type="radio" name="q30" value="A"> A. PC 22.011, 22.021</label><br>
+        <label id="label_30_B"><input type="radio" name="q30" value="B"> B. PC 22.01, 22.031</label><br>
+        <label id="label_30_C"><input type="radio" name="q30" value="C"> C. PC 22.0111, 22.0211</label><br>
+        <label id="label_30_D"><input type="radio" name="q30" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('30', 'A')">Check Answer</button>
+        <div id="exp30" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 31:</strong> Responding officers ______ use medical, diagnosis terms like SID or SUID until a complete investigation can determine cause of death.</p>
+        <label id="label_31_A"><input type="radio" name="q31" value="A"> A. will not</label><br>
+        <label id="label_31_B"><input type="radio" name="q31" value="B"> B. should not</label><br>
+        <label id="label_31_C"><input type="radio" name="q31" value="C"> C. must not</label><br>
+        <label id="label_31_D"><input type="radio" name="q31" value="D"> D. shall not</label><br>
+        <button onclick="checkAnswer('31', 'C')">Check Answer</button>
+        <div id="exp31" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 32:</strong> Pick the least correct major type of elder abuse:</p>
+        <label id="label_32_A"><input type="radio" name="q32" value="A"> A. Neglect</label><br>
+        <label id="label_32_B"><input type="radio" name="q32" value="B"> B. Abandon</label><br>
+        <label id="label_32_C"><input type="radio" name="q32" value="C"> C. Abuse</label><br>
+        <label id="label_32_D"><input type="radio" name="q32" value="D"> D. Exploitation</label><br>
+        <button onclick="checkAnswer('32', 'B')">Check Answer</button>
+        <div id="exp32" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 33:</strong> When showing a single suspect to a witness, what is LEAST correct procedural safeguard?</p>
+        <label id="label_33_A"><input type="radio" name="q33" value="A"> A. Transport witness to suspect</label><br>
+        <label id="label_33_B"><input type="radio" name="q33" value="B"> B. Avoid suggestive comments</label><br>
+        <label id="label_33_C"><input type="radio" name="q33" value="C"> C. Document time/location</label><br>
+        <label id="label_33_D"><input type="radio" name="q33" value="D"> D. Encourage media posting</label><br>
+        <button onclick="checkAnswer('33', 'D')">Check Answer</button>
+        <div id="exp33" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 34:</strong> Which officer duty is NOT part of preliminary property crime response?</p>
+        <label id="label_34_A"><input type="radio" name="q34" value="A"> A. Determine crime, arrest, identify category</label><br>
+        <label id="label_34_B"><input type="radio" name="q34" value="B"> B. Get suspect/vehicle descriptions to dispatch</label><br>
+        <label id="label_34_C"><input type="radio" name="q34" value="C"> C. Record injuries/property loss</label><br>
+        <label id="label_34_D"><input type="radio" name="q34" value="D"> D. Interview suspects and victims for later contact</label><br>
+        <button onclick="checkAnswer('34', 'D')">Check Answer</button>
+        <div id="exp34" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 35:</strong> Which is NOT an element of a continuing investigation?</p>
+        <label id="label_35_A"><input type="radio" name="q35" value="A"> A. Develop and revise crime scheme</label><br>
+        <label id="label_35_B"><input type="radio" name="q35" value="B"> B. Identify accomplices</label><br>
+        <label id="label_35_C"><input type="radio" name="q35" value="C"> C. Prepare case with defense</label><br>
+        <label id="label_35_D"><input type="radio" name="q35" value="D"> D. Locate/arrest suspects</label><br>
+        <button onclick="checkAnswer('35', 'C')">Check Answer</button>
+        <div id="exp35" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 36:</strong> A postmortem exam to determine cause of death is called?</p>
+        <label id="label_36_A"><input type="radio" name="q36" value="A"> A. Postmortem Examination</label><br>
+        <label id="label_36_B"><input type="radio" name="q36" value="B"> B. Autopsy</label><br>
+        <label id="label_36_C"><input type="radio" name="q36" value="C"> C. Mortician Investigation</label><br>
+        <label id="label_36_D"><input type="radio" name="q36" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('36', 'B')">Check Answer</button>
+        <div id="exp36" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 37:</strong> Indicates body position 1–2 hours after death, influenced by environment:</p>
+        <label id="label_37_A"><input type="radio" name="q37" value="A"> A. Rigor Mortis</label><br>
+        <label id="label_37_B"><input type="radio" name="q37" value="B"> B. Postmortem lividity</label><br>
+        <label id="label_37_C"><input type="radio" name="q37" value="C"> C. Putrefaction</label><br>
+        <label id="label_37_D"><input type="radio" name="q37" value="D"> D. Body Temperature</label><br>
+        <button onclick="checkAnswer('37', 'B')">Check Answer</button>
+        <div id="exp37" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 38:</strong> Cadaveric Spasm involves sudden stiffening due to trauma or tension. Which is TRUE?</p>
+        <label id="label_38_A"><input type="radio" name="q38" value="A"> A. Usually in face or hands</label><br>
+        <label id="label_38_B"><input type="radio" name="q38" value="B"> B. Suggests suicide if clutching weapon</label><br>
+        <label id="label_38_C"><input type="radio" name="q38" value="C"> C. Occurs with great tension at death</label><br>
+        <label id="label_38_D"><input type="radio" name="q38" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('38', 'D')">Check Answer</button>
+        <div id="exp38" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 39:</strong> Onset of rigor mortis may begin how soon?</p>
+        <label id="label_39_A"><input type="radio" name="q39" value="A"> A. 5 minutes</label><br>
+        <label id="label_39_B"><input type="radio" name="q39" value="B"> B. 10 minutes</label><br>
+        <label id="label_39_C"><input type="radio" name="q39" value="C"> C. 15 minutes</label><br>
+        <label id="label_39_D"><input type="radio" name="q39" value="D"> D. 25 minutes</label><br>
+        <button onclick="checkAnswer('39', 'C')">Check Answer</button>
+        <div id="exp39" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 40:</strong> The normal body temperature is:</p>
+        <label id="label_40_A"><input type="radio" name="q40" value="A"> A. 98.9°F</label><br>
+        <label id="label_40_B"><input type="radio" name="q40" value="B"> B. 98.4°F</label><br>
+        <label id="label_40_C"><input type="radio" name="q40" value="C"> C. 98.5°F</label><br>
+        <label id="label_40_D"><input type="radio" name="q40" value="D"> D. 98.6°F</label><br>
+        <button onclick="checkAnswer('40', 'D')">Check Answer</button>
+        <div id="exp40" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 41:</strong> Putrefaction is the __________ of body tissues.</p>
+        <label id="label_41_A"><input type="radio" name="q41" value="A"> A. blood settling</label><br>
+        <label id="label_41_B"><input type="radio" name="q41" value="B"> B. stiffening</label><br>
+        <label id="label_41_C"><input type="radio" name="q41" value="C"> C. decomposition</label><br>
+        <label id="label_41_D"><input type="radio" name="q41" value="D"> D. smell</label><br>
+        <button onclick="checkAnswer('41', 'C')">Check Answer</button>
+        <div id="exp41" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 42:</strong> Determine upon arrival: suspect nearby, weapons involved, backup needed. Also:</p>
+        <label id="label_42_A"><input type="radio" name="q42" value="A"> A. Search perimeter for open entry points</label><br>
+        <label id="label_42_B"><input type="radio" name="q42" value="B"> B. Obtain identification like name, DOB, address</label><br>
+        <label id="label_42_C"><input type="radio" name="q42" value="C"> C. Get license plate, driver’s license</label><br>
+        <label id="label_42_D"><input type="radio" name="q42" value="D"> D. All the above</label><br>
+        <button onclick="checkAnswer('42', 'D')">Check Answer</button>
+        <div id="exp42" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 43:</strong> If person is alive and conscious, obtain identification and next of kin info is in?</p>
+        <label id="label_43_A"><input type="radio" name="q43" value="A"> A. ID – Serious Bodily Injury:</label><br>
+        <label id="label_43_B"><input type="radio" name="q43" value="B"> B. ID – Death:</label><br>
+        <label id="label_43_C"><input type="radio" name="q43" value="C"> C. All of these</label><br>
+        <label id="label_43_D"><input type="radio" name="q43" value="D"> D. None of the above</label><br>
+        <button onclick="checkAnswer('43', 'A')">Check Answer</button>
+        <div id="exp43" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 44:</strong> EMS for injuries, Medical Examiner/J.P. for homicides, bomb squad, fire dept, military can all be called to a scene.</p>
+        <label id="label_44_A"><input type="radio" name="q44" value="A"> A. True</label><br>
+        <label id="label_44_B"><input type="radio" name="q44" value="B"> B. False
+Correct Answer: A
+Source: 32. Criminal Investigations.pdf – Special Units
+
+Question 45:
+CCP Art. 49.05: A justice of the peace shall conduct an inquest immediately or ASAP after receiving notification of the death.
+A. True
+B. False
+Correct Answer: A
+Source: 32. Criminal Investigations.pdf – CCP 49.05
+
+Question 46:
+During crime scene protection, establish defined entry/exit points to minimize contamination.
+A. True
+B. False
+Correct Answer: A
+Source: 32. Criminal Investigations.pdf – Crime Scene Protection
+
+Question 47:
+When protecting a crime scene, you should:
+A. Define entry/exit points
+B. Use tape, barriers, personnel to form perimeters</label><br>
+        <label id="label_44_C"><input type="radio" name="q44" value="C"> C. Both of these</label><br>
+        <label id="label_44_D"><input type="radio" name="q44" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('44', 'C')">Check Answer</button>
+        <div id="exp44" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 48:</strong> A crime scene search is a planned search to locate _____ or witnesses.</p>
+        <label id="label_48_A"><input type="radio" name="q48" value="A"> A. physical evidence</label><br>
+        <label id="label_48_B"><input type="radio" name="q48" value="B"> B. murder victims</label><br>
+        <label id="label_48_C"><input type="radio" name="q48" value="C"> C. potential victims</label><br>
+        <label id="label_48_D"><input type="radio" name="q48" value="D"> D. potential suspects</label><br>
+        <button onclick="checkAnswer('48', 'A')">Check Answer</button>
+        <div id="exp48" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 49:</strong> Shoe impressions can’t be used to place a suspect at a scene.</p>
+        <label id="label_49_A"><input type="radio" name="q49" value="A"> A. True</label><br>
+        <label id="label_49_B"><input type="radio" name="q49" value="B"> B. False
+Correct Answer: B
+Source: 32. Criminal Investigations.pdf – Footwear Evidence
+
+Question 50:
+Pick the least correct crime scene objective:
+A. Can help establish that a crime hasn’t been committed
+B. Eliminate persons via DNA testing</label><br>
+        <label id="label_49_C"><input type="radio" name="q49" value="C"> C. Cause suspect to confess</label><br>
+        <label id="label_49_D"><input type="radio" name="q49" value="D"> D. Determine motive</label><br>
+        <button onclick="checkAnswer('49', 'A')">Check Answer</button>
+        <div id="exp49" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 51:</strong> Evaluate physical characteristics of area to be searched—size, landscape, _____, indoors, outdoors.</p>
+        <label id="label_51_A"><input type="radio" name="q51" value="A"> A. density</label><br>
+        <label id="label_51_B"><input type="radio" name="q51" value="B"> B. topography</label><br>
+        <label id="label_51_C"><input type="radio" name="q51" value="C"> C. aerial</label><br>
+        <label id="label_51_D"><input type="radio" name="q51" value="D"> D. None of the above</label><br>
+        <button onclick="checkAnswer('51', 'A')">Check Answer</button>
+        <div id="exp51" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 52:</strong> Indoor scenes usually require only a ___-person team.</p>
+        <label id="label_52_A"><input type="radio" name="q52" value="A"> A. 3</label><br>
+        <label id="label_52_B"><input type="radio" name="q52" value="B"> B. 2</label><br>
+        <label id="label_52_C"><input type="radio" name="q52" value="C"> C. 1</label><br>
+        <label id="label_52_D"><input type="radio" name="q52" value="D"> D. 4</label><br>
+        <button onclick="checkAnswer('52', 'B')">Check Answer</button>
+        <div id="exp52" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 53:</strong> What to consider when choosing search method?</p>
+        <label id="label_53_A"><input type="radio" name="q53" value="A"> A. Type of crime, evidence needed, purpose of search</label><br>
+        <label id="label_53_B"><input type="radio" name="q53" value="B"> B. Size and type of area to cover</label><br>
+        <label id="label_53_C"><input type="radio" name="q53" value="C"> C. Personnel and equipment available</label><br>
+        <label id="label_53_D"><input type="radio" name="q53" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('53', 'D')">Check Answer</button>
+        <div id="exp53" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 54:</strong> Which is NOT a recognized method of crime scene search?</p>
+        <label id="label_54_A"><input type="radio" name="q54" value="A"> A. Quadrant, Sector or Zone Search</label><br>
+        <label id="label_54_B"><input type="radio" name="q54" value="B"> B. Canvas Search</label><br>
+        <label id="label_54_C"><input type="radio" name="q54" value="C"> C. Strip Search</label><br>
+        <label id="label_54_D"><input type="radio" name="q54" value="D"> D. Point-to-point Search</label><br>
+        <button onclick="checkAnswer('54', 'B')">Check Answer</button>
+        <div id="exp54" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 55:</strong> "Notify next of kin, create case file, lab results, autopsy, etc." is part of:</p>
+        <label id="label_55_A"><input type="radio" name="q55" value="A"> A. The basic steps of which a crime scene search normally progresses</label><br>
+        <label id="label_55_B"><input type="radio" name="q55" value="B"> B. An investigation</label><br>
+        <label id="label_55_C"><input type="radio" name="q55" value="C"> C. Crime progression</label><br>
+        <label id="label_55_D"><input type="radio" name="q55" value="D"> D. None of the above</label><br>
+        <button onclick="checkAnswer('55', 'A')">Check Answer</button>
+        <div id="exp55" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 56:</strong> Which type of thief is more prone to violence when cornered?</p>
+        <label id="label_56_A"><input type="radio" name="q56" value="A"> A. Professional thief</label><br>
+        <label id="label_56_B"><input type="radio" name="q56" value="B"> B. Amateur burglar</label><br>
+        <label id="label_56_C"><input type="radio" name="q56" value="C"> C. Semi-professional thief</label><br>
+        <label id="label_56_D"><input type="radio" name="q56" value="D"> D. Juvenile offender</label><br>
+        <button onclick="checkAnswer('56', 'C')">Check Answer</button>
+        <div id="exp56" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 57:</strong> Con artists often exploit victims’ ___________ to gain trust and deceive.</p>
+        <label id="label_57_A"><input type="radio" name="q57" value="A"> A. empathy</label><br>
+        <label id="label_57_B"><input type="radio" name="q57" value="B"> B. greed</label><br>
+        <label id="label_57_C"><input type="radio" name="q57" value="C"> C. fear</label><br>
+        <label id="label_57_D"><input type="radio" name="q57" value="D"> D. ignorance</label><br>
+        <button onclick="checkAnswer('57', 'B')">Check Answer</button>
+        <div id="exp57" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 58:</strong> When an autopsy is performed, which of the following is not included?</p>
+        <label id="label_58_A"><input type="radio" name="q58" value="A"> A. X-rays</label><br>
+        <label id="label_58_B"><input type="radio" name="q58" value="B"> B. Dissection</label><br>
+        <label id="label_58_C"><input type="radio" name="q58" value="C"> C. Internal organ exam</label><br>
+        <label id="label_58_D"><input type="radio" name="q58" value="D"> D. Witness interrogation</label><br>
+        <button onclick="checkAnswer('58', 'D')">Check Answer</button>
+        <div id="exp58" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 59:</strong> Which characteristic is vital for a good investigator?</p>
+        <label id="label_59_A"><input type="radio" name="q59" value="A"> A. Intimidation</label><br>
+        <label id="label_59_B"><input type="radio" name="q59" value="B"> B. Creativity</label><br>
+        <label id="label_59_C"><input type="radio" name="q59" value="C"> C. Observational skills</label><br>
+        <label id="label_59_D"><input type="radio" name="q59" value="D"> D. Both B and C</label><br>
+        <button onclick="checkAnswer('59', 'D')">Check Answer</button>
+        <div id="exp59" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 60:</strong> One of the first actions after arriving at a crime scene:</p>
+        <label id="label_60_A"><input type="radio" name="q60" value="A"> A. Call media</label><br>
+        <label id="label_60_B"><input type="radio" name="q60" value="B"> B. Secure evidence</label><br>
+        <label id="label_60_C"><input type="radio" name="q60" value="C"> C. Determine if suspect is present</label><br>
+        <label id="label_60_D"><input type="radio" name="q60" value="D"> D. File warrant</label><br>
+        <button onclick="checkAnswer('60', 'C')">Check Answer</button>
+        <div id="exp60" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 61:</strong> What term describes the legally gathered evidence from a crime scene?</p>
+        <label id="label_61_A"><input type="radio" name="q61" value="A"> A. Legal observation</label><br>
+        <label id="label_61_B"><input type="radio" name="q61" value="B"> B. Criminal extraction</label><br>
+        <label id="label_61_C"><input type="radio" name="q61" value="C"> C. Criminal investigation</label><br>
+        <label id="label_61_D"><input type="radio" name="q61" value="D"> D. Evidentiary process</label><br>
+        <button onclick="checkAnswer('61', 'C')">Check Answer</button>
+        <div id="exp61" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 62:</strong> “Means the human kidney, liver, heart, lung, pancreas, eye, bone…” refers to:</p>
+        <label id="label_62_A"><input type="radio" name="q62" value="A"> A. Human tissue</label><br>
+        <label id="label_62_B"><input type="radio" name="q62" value="B"> B. Human parts</label><br>
+        <label id="label_62_C"><input type="radio" name="q62" value="C"> C. Human organ</label><br>
+        <label id="label_62_D"><input type="radio" name="q62" value="D"> D. Cadaver</label><br>
+        <button onclick="checkAnswer('62', 'C')">Check Answer</button>
+        <div id="exp62" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 63:</strong> Evidence not based on direct knowledge but deduced from circumstances is:</p>
+        <label id="label_63_A"><input type="radio" name="q63" value="A"> A. Direct Evidence</label><br>
+        <label id="label_63_B"><input type="radio" name="q63" value="B"> B. Circumstantial Evidence</label><br>
+        <label id="label_63_C"><input type="radio" name="q63" value="C"> C. Hearsay</label><br>
+        <label id="label_63_D"><input type="radio" name="q63" value="D"> D. Inference</label><br>
+        <button onclick="checkAnswer('63', 'B')">Check Answer</button>
+        <div id="exp63" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 64:</strong> Corpus delicti literally means:</p>
+        <label id="label_64_A"><input type="radio" name="q64" value="A"> A. Crime of law</label><br>
+        <label id="label_64_B"><input type="radio" name="q64" value="B"> B. Body of crime</label><br>
+        <label id="label_64_C"><input type="radio" name="q64" value="C"> C. Witness statement</label><br>
+        <label id="label_64_D"><input type="radio" name="q64" value="D"> D. Legal process</label><br>
+        <button onclick="checkAnswer('64', 'B')">Check Answer</button>
+        <div id="exp64" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 65:</strong> A criminal’s characteristic method of operation is called:</p>
+        <label id="label_65_A"><input type="radio" name="q65" value="A"> A. Criminal skill</label><br>
+        <label id="label_65_B"><input type="radio" name="q65" value="B"> B. M.O. Delecti</label><br>
+        <label id="label_65_C"><input type="radio" name="q65" value="C"> C. Modus Operandi</label><br>
+        <label id="label_65_D"><input type="radio" name="q65" value="D"> D. Crime pattern</label><br>
+        <button onclick="checkAnswer('65', 'C')">Check Answer</button>
+        <div id="exp65" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 66:</strong> On-the-scene ID by a victim/witness done minutes after the crime is:</p>
+        <label id="label_66_A"><input type="radio" name="q66" value="A"> A. Show-up ID</label><br>
+        <label id="label_66_B"><input type="radio" name="q66" value="B"> B. Field Identification</label><br>
+        <label id="label_66_C"><input type="radio" name="q66" value="C"> C. Line-up</label><br>
+        <label id="label_66_D"><input type="radio" name="q66" value="D"> D. Suspect callout</label><br>
+        <button onclick="checkAnswer('66', 'B')">Check Answer</button>
+        <div id="exp66" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 67:</strong> A legal narrative of events in a crime is a:</p>
+        <label id="label_67_A"><input type="radio" name="q67" value="A"> A. Police report</label><br>
+        <label id="label_67_B"><input type="radio" name="q67" value="B"> B. Statement</label><br>
+        <label id="label_67_C"><input type="radio" name="q67" value="C"> C. Confession</label><br>
+        <label id="label_67_D"><input type="radio" name="q67" value="D"> D. Record</label><br>
+        <button onclick="checkAnswer('67', 'A')">Check Answer</button>
+        <div id="exp67" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 68:</strong> Which of these are tools of a criminal investigator?</p>
+        <label id="label_68_A"><input type="radio" name="q68" value="A"> A. Information</label><br>
+        <label id="label_68_B"><input type="radio" name="q68" value="B"> B. Interviewing</label><br>
+        <label id="label_68_C"><input type="radio" name="q68" value="C"> C. Law of arrest/search/seizure</label><br>
+        <label id="label_68_D"><input type="radio" name="q68" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('68', 'D')">Check Answer</button>
+        <div id="exp68" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 69:</strong> Which is NOT a goal of a criminal investigation?</p>
+        <label id="label_69_A"><input type="radio" name="q69" value="A"> A. Determine if a crime occurred</label><br>
+        <label id="label_69_B"><input type="radio" name="q69" value="B"> B. Illegally arrest the suspect</label><br>
+        <label id="label_69_C"><input type="radio" name="q69" value="C"> C. Recover stolen property</label><br>
+        <label id="label_69_D"><input type="radio" name="q69" value="D"> D. Present best case to prosecution</label><br>
+        <button onclick="checkAnswer('69', 'B')">Check Answer</button>
+        <div id="exp69" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 70:</strong> The ultimate goal of an investigator is to determine the:</p>
+        <label id="label_70_A"><input type="radio" name="q70" value="A"> A. Motive</label><br>
+        <label id="label_70_B"><input type="radio" name="q70" value="B"> B. Truth</label><br>
+        <label id="label_70_C"><input type="radio" name="q70" value="C"> C. Criminal</label><br>
+        <label id="label_70_D"><input type="radio" name="q70" value="D"> D. Scene</label><br>
+        <button onclick="checkAnswer('70', 'B')">Check Answer</button>
+        <div id="exp70" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 71:</strong> The legal significance of evidence is in its effect on:</p>
+        <label id="label_71_A"><input type="radio" name="q71" value="A"> A. Defendant</label><br>
+        <label id="label_71_B"><input type="radio" name="q71" value="B"> B. Juror or judge</label><br>
+        <label id="label_71_C"><input type="radio" name="q71" value="C"> C. Prosecution</label><br>
+        <label id="label_71_D"><input type="radio" name="q71" value="D"> D. Bystander</label><br>
+        <button onclick="checkAnswer('71', 'B')">Check Answer</button>
+        <div id="exp71" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 72:</strong> Proof beyond a reasonable doubt requires:</p>
+        <label id="label_72_A"><input type="radio" name="q72" value="A"> A. Circumstantial evidence</label><br>
+        <label id="label_72_B"><input type="radio" name="q72" value="B"> B. Real proof</label><br>
+        <label id="label_72_C"><input type="radio" name="q72" value="C"> C. Corroborating evidence</label><br>
+        <label id="label_72_D"><input type="radio" name="q72" value="D"> D. Confession</label><br>
+        <button onclick="checkAnswer('72', 'C')">Check Answer</button>
+        <div id="exp72" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 73:</strong> What are characteristics of a criminal investigator?</p>
+        <label id="label_73_A"><input type="radio" name="q73" value="A"> A. Curious</label><br>
+        <label id="label_73_B"><input type="radio" name="q73" value="B"> B. Observant</label><br>
+        <label id="label_73_C"><input type="radio" name="q73" value="C"> C. Suspicious</label><br>
+        <label id="label_73_D"><input type="radio" name="q73" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('73', 'D')">Check Answer</button>
+        <div id="exp73" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 74:</strong> Good criminal investigators must use:</p>
+        <label id="label_74_A"><input type="radio" name="q74" value="A"> A. Rapport skills</label><br>
+        <label id="label_74_B"><input type="radio" name="q74" value="B"> B. Logical thinking</label><br>
+        <label id="label_74_C"><input type="radio" name="q74" value="C"> C. Creative problem solving</label><br>
+        <label id="label_74_D"><input type="radio" name="q74" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('74', 'D')">Check Answer</button>
+        <div id="exp74" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 75:</strong> Which quality ensures fairness to all parties during an investigation?</p>
+        <label id="label_75_A"><input type="radio" name="q75" value="A"> A. Assertiveness</label><br>
+        <label id="label_75_B"><input type="radio" name="q75" value="B"> B. Objectivity</label><br>
+        <label id="label_75_C"><input type="radio" name="q75" value="C"> C. Sympathy</label><br>
+        <label id="label_75_D"><input type="radio" name="q75" value="D"> D. Prejudice</label><br>
+        <button onclick="checkAnswer('75', 'B')">Check Answer</button>
+        <div id="exp75" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 76:</strong> Which thief is most likely seeking money for drugs?</p>
+        <label id="label_76_A"><input type="radio" name="q76" value="A"> A. Professional</label><br>
+        <label id="label_76_B"><input type="radio" name="q76" value="B"> B. Burglar</label><br>
+        <label id="label_76_C"><input type="radio" name="q76" value="C"> C. Semi-professional</label><br>
+        <label id="label_76_D"><input type="radio" name="q76" value="D"> D. Con Artist</label><br>
+        <button onclick="checkAnswer('76', 'C')">Check Answer</button>
+        <div id="exp76" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 77:</strong> Which thief is most dangerous when cornered?</p>
+        <label id="label_77_A"><input type="radio" name="q77" value="A"> A. Professional</label><br>
+        <label id="label_77_B"><input type="radio" name="q77" value="B"> B. Skilled</label><br>
+        <label id="label_77_C"><input type="radio" name="q77" value="C"> C. Amateur</label><br>
+        <label id="label_77_D"><input type="radio" name="q77" value="D"> D. Semi-professional</label><br>
+        <button onclick="checkAnswer('77', 'D')">Check Answer</button>
+        <div id="exp77" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 78:</strong> Characteristics of burglary include:</p>
+        <label id="label_78_A"><input type="radio" name="q78" value="A"> A. Residential premises</label><br>
+        <label id="label_78_B"><input type="radio" name="q78" value="B"> B. Safe burglary</label><br>
+        <label id="label_78_C"><input type="radio" name="q78" value="C"> C. Vehicle entries</label><br>
+        <label id="label_78_D"><input type="radio" name="q78" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('78', 'D')">Check Answer</button>
+        <div id="exp78" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 79:</strong> “Something for nothing” scams exploiting greed are called:</p>
+        <label id="label_79_A"><input type="radio" name="q79" value="A"> A. Sleight of hand games</label><br>
+        <label id="label_79_B"><input type="radio" name="q79" value="B"> B. Con schemes</label><br>
+        <label id="label_79_C"><input type="radio" name="q79" value="C"> C. Con artistry</label><br>
+        <label id="label_79_D"><input type="radio" name="q79" value="D"> D. Trickery</label><br>
+        <button onclick="checkAnswer('79', 'B')">Check Answer</button>
+        <div id="exp79" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 80:</strong> Con artists often prey on the:</p>
+        <label id="label_80_A"><input type="radio" name="q80" value="A"> A. Children</label><br>
+        <label id="label_80_B"><input type="radio" name="q80" value="B"> B. Elderly</label><br>
+        <label id="label_80_C"><input type="radio" name="q80" value="C"> C. Men</label><br>
+        <label id="label_80_D"><input type="radio" name="q80" value="D"> D. Police</label><br>
+        <button onclick="checkAnswer('80', 'B')">Check Answer</button>
+        <div id="exp80" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 101:</strong> Street thieves often:</p>
+        <label id="label_101_A"><input type="radio" name="q101" value="A"> A. Take reckless chances</label><br>
+        <label id="label_101_B"><input type="radio" name="q101" value="B"> B. Are heavily armed</label><br>
+        <label id="label_101_C"><input type="radio" name="q101" value="C"> C. Avoid attention</label><br>
+        <label id="label_101_D"><input type="radio" name="q101" value="D"> D. Are usually sober</label><br>
+        <button onclick="checkAnswer('101', 'A')">Check Answer</button>
+        <div id="exp101" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 102:</strong> The truly professional thief will:</p>
+        <label id="label_102_A"><input type="radio" name="q102" value="A"> A. Carry multiple weapons</label><br>
+        <label id="label_102_B"><input type="radio" name="q102" value="B"> B. Try to outwit captors without weapons</label><br>
+        <label id="label_102_C"><input type="radio" name="q102" value="C"> C. Commit crimes for revenge</label><br>
+        <label id="label_102_D"><input type="radio" name="q102" value="D"> D. Work alone</label><br>
+        <button onclick="checkAnswer('102', 'B')">Check Answer</button>
+        <div id="exp102" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 103:</strong> What is “salvage switch” in auto theft?</p>
+        <label id="label_103_A"><input type="radio" name="q103" value="A"> A. Altering identity using a total loss vehicle</label><br>
+        <label id="label_103_B"><input type="radio" name="q103" value="B"> B. Scrapping legal cars</label><br>
+        <label id="label_103_C"><input type="radio" name="q103" value="C"> C. Rebuilding stolen engines</label><br>
+        <label id="label_103_D"><input type="radio" name="q103" value="D"> D. Repainting stolen cars</label><br>
+        <button onclick="checkAnswer('103', 'A')">Check Answer</button>
+        <div id="exp103" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 104:</strong> A “junk” salvage title means:</p>
+        <label id="label_104_A"><input type="radio" name="q104" value="A"> A. Totaled vehicle not roadworthy</label><br>
+        <label id="label_104_B"><input type="radio" name="q104" value="B"> B. Car that passed emissions</label><br>
+        <label id="label_104_C"><input type="radio" name="q104" value="C"> C. New registration required</label><br>
+        <label id="label_104_D"><input type="radio" name="q104" value="D"> D. Vehicle being repainted</label><br>
+        <button onclick="checkAnswer('104', 'A')">Check Answer</button>
+        <div id="exp104" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 105:</strong> Many rental companies struggle with:</p>
+        <label id="label_105_A"><input type="radio" name="q105" value="A"> A. Inventory tracking</label><br>
+        <label id="label_105_B"><input type="radio" name="q105" value="B"> B. Reporting damages</label><br>
+        <label id="label_105_C"><input type="radio" name="q105" value="C"> C. GPS coordination</label><br>
+        <label id="label_105_D"><input type="radio" name="q105" value="D"> D. License renewals</label><br>
+        <button onclick="checkAnswer('105', 'A')">Check Answer</button>
+        <div id="exp105" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 106:</strong> In rental thefts, a common issue is:</p>
+        <label id="label_106_A"><input type="radio" name="q106" value="A"> A. Car is stolen quickly</label><br>
+        <label id="label_106_B"><input type="radio" name="q106" value="B"> B. Vehicle not reported stolen for weeks</label><br>
+        <label id="label_106_C"><input type="radio" name="q106" value="C"> C. Insurance fraud</label><br>
+        <label id="label_106_D"><input type="radio" name="q106" value="D"> D. GPS tampering</label><br>
+        <button onclick="checkAnswer('106', 'B')">Check Answer</button>
+        <div id="exp106" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 107:</strong> Who should officers check with regarding repossession?</p>
+        <label id="label_107_A"><input type="radio" name="q107" value="A"> A. Dealership</label><br>
+        <label id="label_107_B"><input type="radio" name="q107" value="B"> B. Owner</label><br>
+        <label id="label_107_C"><input type="radio" name="q107" value="C"> C. Lien holder</label><br>
+        <label id="label_107_D"><input type="radio" name="q107" value="D"> D. Tow company</label><br>
+        <button onclick="checkAnswer('107', 'C')">Check Answer</button>
+        <div id="exp107" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 108:</strong> Which is a category of criminal homicide?</p>
+        <label id="label_108_A"><input type="radio" name="q108" value="A"> A. Revenge killing</label><br>
+        <label id="label_108_B"><input type="radio" name="q108" value="B"> B. Felony murder</label><br>
+        <label id="label_108_C"><input type="radio" name="q108" value="C"> C. Anger killing</label><br>
+        <label id="label_108_D"><input type="radio" name="q108" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('108', 'D')">Check Answer</button>
+        <div id="exp108" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 109:</strong> Sex Offender Registration is found in:</p>
+        <label id="label_109_A"><input type="radio" name="q109" value="A"> A. CCP Chapter 62.051</label><br>
+        <label id="label_109_B"><input type="radio" name="q109" value="B"> B. PC 22.021</label><br>
+        <label id="label_109_C"><input type="radio" name="q109" value="C"> C. CCP Chapter 31</label><br>
+        <label id="label_109_D"><input type="radio" name="q109" value="D"> D. CCP Chapter 49</label><br>
+        <button onclick="checkAnswer('109', 'A')">Check Answer</button>
+        <div id="exp109" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 110:</strong> Sexual assaults are covered under:</p>
+        <label id="label_110_A"><input type="radio" name="q110" value="A"> A. PC 22.011, 22.021</label><br>
+        <label id="label_110_B"><input type="radio" name="q110" value="B"> B. PC 22.001, 22.003</label><br>
+        <label id="label_110_C"><input type="radio" name="q110" value="C"> C. CCP 49.01</label><br>
+        <label id="label_110_D"><input type="radio" name="q110" value="D"> D. CCP 22.0111</label><br>
+        <button onclick="checkAnswer('110', 'A')">Check Answer</button>
+        <div id="exp110" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 111:</strong> Child fatalities: Officers ______ use terms like SIDS before cause is determined.</p>
+        <label id="label_111_A"><input type="radio" name="q111" value="A"> A. will not</label><br>
+        <label id="label_111_B"><input type="radio" name="q111" value="B"> B. must not</label><br>
+        <label id="label_111_C"><input type="radio" name="q111" value="C"> C. should not</label><br>
+        <label id="label_111_D"><input type="radio" name="q111" value="D"> D. shall not</label><br>
+        <button onclick="checkAnswer('111', 'C')">Check Answer</button>
+        <div id="exp111" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 112:</strong> Pick the least correct major type of elder abuse:</p>
+        <label id="label_112_A"><input type="radio" name="q112" value="A"> A. Neglect</label><br>
+        <label id="label_112_B"><input type="radio" name="q112" value="B"> B. Exploitation</label><br>
+        <label id="label_112_C"><input type="radio" name="q112" value="C"> C. Abuse</label><br>
+        <label id="label_112_D"><input type="radio" name="q112" value="D"> D. Abandon</label><br>
+        <button onclick="checkAnswer('112', 'D')">Check Answer</button>
+        <div id="exp112" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 113:</strong> Which is least correct for minimizing suggestiveness in show-up ID?</p>
+        <label id="label_113_A"><input type="radio" name="q113" value="A"> A. Take witness to suspect location</label><br>
+        <label id="label_113_B"><input type="radio" name="q113" value="B"> B. Document time and location</label><br>
+        <label id="label_113_C"><input type="radio" name="q113" value="C"> C. Influence witness subtly</label><br>
+        <label id="label_113_D"><input type="radio" name="q113" value="D"> D. Avoid suggestions</label><br>
+        <button onclick="checkAnswer('113', 'C')">Check Answer</button>
+        <div id="exp113" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 114:</strong> Which officer duty is incorrect in preliminary investigation?</p>
+        <label id="label_114_A"><input type="radio" name="q114" value="A"> A. Establish if crime occurred</label><br>
+        <label id="label_114_B"><input type="radio" name="q114" value="B"> B. Record suspect data</label><br>
+        <label id="label_114_C"><input type="radio" name="q114" value="C"> C. File final court motion</label><br>
+        <label id="label_114_D"><input type="radio" name="q114" value="D"> D. Determine how crime was committed</label><br>
+        <button onclick="checkAnswer('114', 'C')">Check Answer</button>
+        <div id="exp114" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 115:</strong> Which is NOT an element of continuing investigation?</p>
+        <label id="label_115_A"><input type="radio" name="q115" value="A"> A. Identify perpetrator</label><br>
+        <label id="label_115_B"><input type="radio" name="q115" value="B"> B. Develop crime scheme</label><br>
+        <label id="label_115_C"><input type="radio" name="q115" value="C"> C. Prepare case for prosecution</label><br>
+        <label id="label_115_D"><input type="radio" name="q115" value="D"> D. Confer with defense</label><br>
+        <button onclick="checkAnswer('115', 'D')">Check Answer</button>
+        <div id="exp115" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 116:</strong> Postmortem exam of body is called:</p>
+        <label id="label_116_A"><input type="radio" name="q116" value="A"> A. Mortician Inquiry</label><br>
+        <label id="label_116_B"><input type="radio" name="q116" value="B"> B. Forensic surgery</label><br>
+        <label id="label_116_C"><input type="radio" name="q116" value="C"> C. Autopsy</label><br>
+        <label id="label_116_D"><input type="radio" name="q116" value="D"> D. None of these</label><br>
+        <button onclick="checkAnswer('116', 'C')">Check Answer</button>
+        <div id="exp116" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 117:</strong> Postmortem lividity means:</p>
+        <label id="label_117_A"><input type="radio" name="q117" value="A"> A. Blood pressure rise</label><br>
+        <label id="label_117_B"><input type="radio" name="q117" value="B"> B. Stiff limbs</label><br>
+        <label id="label_117_C"><input type="radio" name="q117" value="C"> C. Skin discoloration due to blood settling</label><br>
+        <label id="label_117_D"><input type="radio" name="q117" value="D"> D. Sudden temp drop</label><br>
+        <button onclick="checkAnswer('117', 'C')">Check Answer</button>
+        <div id="exp117" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 118:</strong> Cadaveric spasm can:</p>
+        <label id="label_118_A"><input type="radio" name="q118" value="A"> A. Indicate suicide</label><br>
+        <label id="label_118_B"><input type="radio" name="q118" value="B"> B. Occur in hand muscles</label><br>
+        <label id="label_118_C"><input type="radio" name="q118" value="C"> C. Happen under extreme stress</label><br>
+        <label id="label_118_D"><input type="radio" name="q118" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('118', 'D')">Check Answer</button>
+        <div id="exp118" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 119:</strong> Rigor mortis onset range:</p>
+        <label id="label_119_A"><input type="radio" name="q119" value="A"> A. 10–30 minutes</label><br>
+        <label id="label_119_B"><input type="radio" name="q119" value="B"> B. 2–3 hours</label><br>
+        <label id="label_119_C"><input type="radio" name="q119" value="C"> C. Few minutes to 15 hours</label><br>
+        <label id="label_119_D"><input type="radio" name="q119" value="D"> D. Exactly 6 hours</label><br>
+        <button onclick="checkAnswer('119', 'C')">Check Answer</button>
+        <div id="exp119" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 120:</strong> Normal body temp before death is:</p>
+        <label id="label_120_A"><input type="radio" name="q120" value="A"> A. 98.9 F</label><br>
+        <label id="label_120_B"><input type="radio" name="q120" value="B"> B. 98.4 F</label><br>
+        <label id="label_120_C"><input type="radio" name="q120" value="C"> C. 98.6 F</label><br>
+        <label id="label_120_D"><input type="radio" name="q120" value="D"> D. 98.3 F</label><br>
+        <button onclick="checkAnswer('120', 'C')">Check Answer</button>
+        <div id="exp120" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 141:</strong> Putrefaction is the __________ of body tissues.</p>
+        <label id="label_141_A"><input type="radio" name="q141" value="A"> A. blood settling</label><br>
+        <label id="label_141_B"><input type="radio" name="q141" value="B"> B. stiffening</label><br>
+        <label id="label_141_C"><input type="radio" name="q141" value="C"> C. decomposition</label><br>
+        <label id="label_141_D"><input type="radio" name="q141" value="D"> D. smell</label><br>
+        <button onclick="checkAnswer('141', 'C')">Check Answer</button>
+        <div id="exp141" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 142:</strong> Upon arrival at crime scene, officers should:</p>
+        <label id="label_142_A"><input type="radio" name="q142" value="A"> A. Secure evidence before suspect search</label><br>
+        <label id="label_142_B"><input type="radio" name="q142" value="B"> B. Determine if suspect is still nearby</label><br>
+        <label id="label_142_C"><input type="radio" name="q142" value="C"> C. Call media for alert</label><br>
+        <label id="label_142_D"><input type="radio" name="q142" value="D"> D. Set arrest deadline</label><br>
+        <button onclick="checkAnswer('142', 'B')">Check Answer</button>
+        <div id="exp142" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 143:</strong> Scene arrival protocol includes:</p>
+        <label id="label_143_A"><input type="radio" name="q143" value="A"> A. Name, DOB, Address of witnesses</label><br>
+        <label id="label_143_B"><input type="radio" name="q143" value="B"> B. DL and plate of suspect vehicles</label><br>
+        <label id="label_143_C"><input type="radio" name="q143" value="C"> C. Search building perimeter</label><br>
+        <label id="label_143_D"><input type="radio" name="q143" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('143', 'D')">Check Answer</button>
+        <div id="exp143" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 144:</strong> When person is alive and conscious after crime, you should:</p>
+        <label id="label_144_A"><input type="radio" name="q144" value="A"> A. ID next of kin</label><br>
+        <label id="label_144_B"><input type="radio" name="q144" value="B"> B. Get ID and address</label><br>
+        <label id="label_144_C"><input type="radio" name="q144" value="C"> C. Notify investigators</label><br>
+        <label id="label_144_D"><input type="radio" name="q144" value="D"> D. Transport without info</label><br>
+        <button onclick="checkAnswer('144', 'B')">Check Answer</button>
+        <div id="exp144" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 145:</strong> EMS, ME/JP, bomb squad, military may be called to scene.
+True / False
+Correct Answer: True
+Source: 32. Criminal Investigations.pdf – 32.24
+
+Question 146:
+CCP Art. 49.05: TIME AND PLACE OF INQUEST; duties of justice of peace
+True / False
+Correct Answer: True
+Source: 32. Criminal Investigations.pdf – 32.26
+
+Question 147:
+During crime scene protection, define entry/exit to:</p>
+        <label id="label_145_A"><input type="radio" name="q145" value="A"> A. Track witnesses</label><br>
+        <label id="label_145_B"><input type="radio" name="q145" value="B"> B. Minimize evidence loss</label><br>
+        <label id="label_145_C"><input type="radio" name="q145" value="C"> C. Ensure media safety</label><br>
+        <label id="label_145_D"><input type="radio" name="q145" value="D"> D. Setup patrol rotation</label><br>
+        <button onclick="checkAnswer('145', 'B')">Check Answer</button>
+        <div id="exp145" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 148:</strong> Crime scene protection should involve:</p>
+        <label id="label_148_A"><input type="radio" name="q148" value="A"> A. Entry/exit points</label><br>
+        <label id="label_148_B"><input type="radio" name="q148" value="B"> B. Inner/outer perimeter</label><br>
+        <label id="label_148_C"><input type="radio" name="q148" value="C"> C. Street tape, barricades, personnel</label><br>
+        <label id="label_148_D"><input type="radio" name="q148" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('148', 'D')">Check Answer</button>
+        <div id="exp148" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 149:</strong> Crime scene search is to locate:</p>
+        <label id="label_149_A"><input type="radio" name="q149" value="A"> A. Physical evidence or witnesses</label><br>
+        <label id="label_149_B"><input type="radio" name="q149" value="B"> B. News reporters</label><br>
+        <label id="label_149_C"><input type="radio" name="q149" value="C"> C. Suspects' lawyers</label><br>
+        <label id="label_149_D"><input type="radio" name="q149" value="D"> D. Interrogation officers</label><br>
+        <button onclick="checkAnswer('149', 'A')">Check Answer</button>
+        <div id="exp149" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 150:</strong> Shoe impressions can't be used to place suspect at scene.
+True / False
+Correct Answer: False
+Source: 32. Criminal Investigations.pdf – 32.28
+
+Question 151:
+Crime scene search helps EXCEPT:</p>
+        <label id="label_150_A"><input type="radio" name="q150" value="A"> A. Determine motive</label><br>
+        <label id="label_150_B"><input type="radio" name="q150" value="B"> B. Confirm crime occurred</label><br>
+        <label id="label_150_C"><input type="radio" name="q150" value="C"> C. Eliminate suspects</label><br>
+        <label id="label_150_D"><input type="radio" name="q150" value="D"> D. Cause suspects to confess</label><br>
+        <button onclick="checkAnswer('150', 'A')">Check Answer</button>
+        <div id="exp150" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 152:</strong> Search problem factors include:</p>
+        <label id="label_152_A"><input type="radio" name="q152" value="A"> A. Landscape</label><br>
+        <label id="label_152_B"><input type="radio" name="q152" value="B"> B. Indoors or outdoors</label><br>
+        <label id="label_152_C"><input type="radio" name="q152" value="C"> C. Size and contents</label><br>
+        <label id="label_152_D"><input type="radio" name="q152" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('152', 'D')">Check Answer</button>
+        <div id="exp152" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 153:</strong> Indoor scenes require ___ person team.</p>
+        <label id="label_153_A"><input type="radio" name="q153" value="A"> A. 2</label><br>
+        <label id="label_153_B"><input type="radio" name="q153" value="B"> B. 3</label><br>
+        <label id="label_153_C"><input type="radio" name="q153" value="C"> C. 4</label><br>
+        <label id="label_153_D"><input type="radio" name="q153" value="D"> D. 5</label><br>
+        <button onclick="checkAnswer('153', 'A')">Check Answer</button>
+        <div id="exp153" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 154:</strong> When selecting search method consider:</p>
+        <label id="label_154_A"><input type="radio" name="q154" value="A"> A. Type of crime</label><br>
+        <label id="label_154_B"><input type="radio" name="q154" value="B"> B. Evidence type</label><br>
+        <label id="label_154_C"><input type="radio" name="q154" value="C"> C. Personnel needed</label><br>
+        <label id="label_154_D"><input type="radio" name="q154" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('154', 'D')">Check Answer</button>
+        <div id="exp154" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 155:</strong> Which is NOT a method of crime scene search:</p>
+        <label id="label_155_A"><input type="radio" name="q155" value="A"> A. Strip search</label><br>
+        <label id="label_155_B"><input type="radio" name="q155" value="B"> B. Grid</label><br>
+        <label id="label_155_C"><input type="radio" name="q155" value="C"> C. Spiral</label><br>
+        <label id="label_155_D"><input type="radio" name="q155" value="D"> D. Legal loop</label><br>
+        <button onclick="checkAnswer('155', 'D')">Check Answer</button>
+        <div id="exp155" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 156:</strong> What is point-to-point search?</p>
+        <label id="label_156_A"><input type="radio" name="q156" value="A"> A. Connecting clues from scene to scene</label><br>
+        <label id="label_156_B"><input type="radio" name="q156" value="B"> B. Lining up officers in rows</label><br>
+        <label id="label_156_C"><input type="radio" name="q156" value="C"> C. Searching outer edge inward</label><br>
+        <label id="label_156_D"><input type="radio" name="q156" value="D"> D. Investigating victim point only</label><br>
+        <button onclick="checkAnswer('156', 'A')">Check Answer</button>
+        <div id="exp156" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 157:</strong> Which is not a recognized pattern?</p>
+        <label id="label_157_A"><input type="radio" name="q157" value="A"> A. Quadrant</label><br>
+        <label id="label_157_B"><input type="radio" name="q157" value="B"> B. Spiral</label><br>
+        <label id="label_157_C"><input type="radio" name="q157" value="C"> C. Grid</label><br>
+        <label id="label_157_D"><input type="radio" name="q157" value="D"> D. Scatter</label><br>
+        <button onclick="checkAnswer('157', 'D')">Check Answer</button>
+        <div id="exp157" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 158:</strong> Procedures involved in implementing a crime scene search include:</p>
+        <label id="label_158_A"><input type="radio" name="q158" value="A"> A. Create case file</label><br>
+        <label id="label_158_B"><input type="radio" name="q158" value="B"> B. Submit lab results</label><br>
+        <label id="label_158_C"><input type="radio" name="q158" value="C"> C. Notify next of kin</label><br>
+        <label id="label_158_D"><input type="radio" name="q158" value="D"> D. All of the above</label><br>
+        <button onclick="checkAnswer('158', 'D')">Check Answer</button>
+        <div id="exp158" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 159:</strong> Which term refers to skin discoloration due to blood settling?</p>
+        <label id="label_159_A"><input type="radio" name="q159" value="A"> A. Putrefaction</label><br>
+        <label id="label_159_B"><input type="radio" name="q159" value="B"> B. Lividity</label><br>
+        <label id="label_159_C"><input type="radio" name="q159" value="C"> C. Rigor mortis</label><br>
+        <label id="label_159_D"><input type="radio" name="q159" value="D"> D. Autolysis</label><br>
+        <button onclick="checkAnswer('159', 'B')">Check Answer</button>
+        <div id="exp159" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 160:</strong> Autopsy includes all EXCEPT:</p>
+        <label id="label_160_A"><input type="radio" name="q160" value="A"> A. Organ inspection</label><br>
+        <label id="label_160_B"><input type="radio" name="q160" value="B"> B. X-rays</label><br>
+        <label id="label_160_C"><input type="radio" name="q160" value="C"> C. Eyewitness reports</label><br>
+        <label id="label_160_D"><input type="radio" name="q160" value="D"> D. Dissection</label><br>
+        <button onclick="checkAnswer('160', 'C')">Check Answer</button>
+        <div id="exp160" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 161:</strong> Sexual assault investigations include what Penal Code chapters?</p>
+        <label id="label_161_A"><input type="radio" name="q161" value="A"> A. 22.011 and 22.021</label><br>
+        <label id="label_161_B"><input type="radio" name="q161" value="B"> B. 49.01</label><br>
+        <label id="label_161_C"><input type="radio" name="q161" value="C"> C. 22.01 and 22.03</label><br>
+        <label id="label_161_D"><input type="radio" name="q161" value="D"> D. 31.04 and 31.05</label><br>
+        <button onclick="checkAnswer('161', 'A')">Check Answer</button>
+        <div id="exp161" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 162:</strong> Cadaveric spasm often occurs:</p>
+        <label id="label_162_A"><input type="radio" name="q162" value="A"> A. Minutes after death</label><br>
+        <label id="label_162_B"><input type="radio" name="q162" value="B"> B. During putrefaction</label><br>
+        <label id="label_162_C"><input type="radio" name="q162" value="C"> C. Instantly in high stress death</label><br>
+        <label id="label_162_D"><input type="radio" name="q162" value="D"> D. Only in strangulation</label><br>
+        <button onclick="checkAnswer('162', 'C')">Check Answer</button>
+        <div id="exp162" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 163:</strong> Rigor mortis usually begins within:</p>
+        <label id="label_163_A"><input type="radio" name="q163" value="A"> A. 5 to 6 hours</label><br>
+        <label id="label_163_B"><input type="radio" name="q163" value="B"> B. 1 to 2 minutes</label><br>
+        <label id="label_163_C"><input type="radio" name="q163" value="C"> C. 2 to 3 days</label><br>
+        <label id="label_163_D"><input type="radio" name="q163" value="D"> D. 10 to 15 hours</label><br>
+        <button onclick="checkAnswer('163', 'A')">Check Answer</button>
+        <div id="exp163" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 164:</strong> Con artists typically target:</p>
+        <label id="label_164_A"><input type="radio" name="q164" value="A"> A. Military officers</label><br>
+        <label id="label_164_B"><input type="radio" name="q164" value="B"> B. Middle-aged adults</label><br>
+        <label id="label_164_C"><input type="radio" name="q164" value="C"> C. Elderly</label><br>
+        <label id="label_164_D"><input type="radio" name="q164" value="D"> D. Teenagers</label><br>
+        <button onclick="checkAnswer('164', 'C')">Check Answer</button>
+        <div id="exp164" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 165:</strong> Which is a valid show-up ID safeguard?</p>
+        <label id="label_165_A"><input type="radio" name="q165" value="A"> A. Influence witness slightly</label><br>
+        <label id="label_165_B"><input type="radio" name="q165" value="B"> B. Ask witness to consider suspect’s guilt</label><br>
+        <label id="label_165_C"><input type="radio" name="q165" value="C"> C. Minimize suggestiveness</label><br>
+        <label id="label_165_D"><input type="radio" name="q165" value="D"> D. Let witness speak to press</label><br>
+        <button onclick="checkAnswer('165', 'C')">Check Answer</button>
+        <div id="exp165" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 166:</strong> Officers should NOT use “SIDS” term prematurely.
+True / False
+Correct Answer: True
+Source: 32. Criminal Investigations.pdf – 32.16
+
+Question 167:
+Common elder abuse types include all EXCEPT:</p>
+        <label id="label_166_A"><input type="radio" name="q166" value="A"> A. Exploitation</label><br>
+        <label id="label_166_B"><input type="radio" name="q166" value="B"> B. Neglect</label><br>
+        <label id="label_166_C"><input type="radio" name="q166" value="C"> C. Abandon</label><br>
+        <label id="label_166_D"><input type="radio" name="q166" value="D"> D. Enabling</label><br>
+        <button onclick="checkAnswer('166', 'D')">Check Answer</button>
+        <div id="exp166" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 168:</strong> Continuing investigation involves all EXCEPT:</p>
+        <label id="label_168_A"><input type="radio" name="q168" value="A"> A. Arrest suspects</label><br>
+        <label id="label_168_B"><input type="radio" name="q168" value="B"> B. Develop crime pattern</label><br>
+        <label id="label_168_C"><input type="radio" name="q168" value="C"> C. Confer with defense</label><br>
+        <label id="label_168_D"><input type="radio" name="q168" value="D"> D. Prepare warrant</label><br>
+        <button onclick="checkAnswer('168', 'C')">Check Answer</button>
+        <div id="exp168" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 169:</strong> Which tool is NOT part of investigator’s kit?</p>
+        <label id="label_169_A"><input type="radio" name="q169" value="A"> A. Information</label><br>
+        <label id="label_169_B"><input type="radio" name="q169" value="B"> B. Search Law</label><br>
+        <label id="label_169_C"><input type="radio" name="q169" value="C"> C. Tort Reform</label><br>
+        <label id="label_169_D"><input type="radio" name="q169" value="D"> D. Interviewing</label><br>
+        <button onclick="checkAnswer('169', 'C')">Check Answer</button>
+        <div id="exp169" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 170:</strong> Which is NOT part of crime scene arrival procedure?</p>
+        <label id="label_170_A"><input type="radio" name="q170" value="A"> A. Observe vehicles</label><br>
+        <label id="label_170_B"><input type="radio" name="q170" value="B"> B. Locate suspect</label><br>
+        <label id="label_170_C"><input type="radio" name="q170" value="C"> C. Make warrant call</label><br>
+        <label id="label_170_D"><input type="radio" name="q170" value="D"> D. Determine offense in progress</label><br>
+        <button onclick="checkAnswer('170', 'C')">Check Answer</button>
+        <div id="exp170" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 171:</strong> Investigation goal is to determine:</p>
+        <label id="label_171_A"><input type="radio" name="q171" value="A"> A. Blame</label><br>
+        <label id="label_171_B"><input type="radio" name="q171" value="B"> B. Motive</label><br>
+        <label id="label_171_C"><input type="radio" name="q171" value="C"> C. Truth</label><br>
+        <label id="label_171_D"><input type="radio" name="q171" value="D"> D. Escape route</label><br>
+        <button onclick="checkAnswer('171', 'C')">Check Answer</button>
+        <div id="exp171" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 172:</strong> Which of the following describes modus operandi?</p>
+        <label id="label_172_A"><input type="radio" name="q172" value="A"> A. Type of evidence used</label><br>
+        <label id="label_172_B"><input type="radio" name="q172" value="B"> B. Criminal's method of operation</label><br>
+        <label id="label_172_C"><input type="radio" name="q172" value="C"> C. Legal strategy</label><br>
+        <label id="label_172_D"><input type="radio" name="q172" value="D"> D. Defense testimony</label><br>
+        <button onclick="checkAnswer('172', 'B')">Check Answer</button>
+        <div id="exp172" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 173:</strong> Who conducts inquests per CCP 49.05?</p>
+        <label id="label_173_A"><input type="radio" name="q173" value="A"> A. Officer</label><br>
+        <label id="label_173_B"><input type="radio" name="q173" value="B"> B. Medical Examiner</label><br>
+        <label id="label_173_C"><input type="radio" name="q173" value="C"> C. Justice of Peace</label><br>
+        <label id="label_173_D"><input type="radio" name="q173" value="D"> D. Prosecutor</label><br>
+        <button onclick="checkAnswer('173', 'C')">Check Answer</button>
+        <div id="exp173" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 174:</strong> What happens to scene evidence before full crime determination?</p>
+        <label id="label_174_A"><input type="radio" name="q174" value="A"> A. Secure and protect</label><br>
+        <label id="label_174_B"><input type="radio" name="q174" value="B"> B. Destroy contaminated</label><br>
+        <label id="label_174_C"><input type="radio" name="q174" value="C"> C. Leave untouched</label><br>
+        <label id="label_174_D"><input type="radio" name="q174" value="D"> D. Submit to media</label><br>
+        <button onclick="checkAnswer('174', 'A')">Check Answer</button>
+        <div id="exp174" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 175:</strong> Blood pooling after death is called:</p>
+        <label id="label_175_A"><input type="radio" name="q175" value="A"> A. Rigor mortis</label><br>
+        <label id="label_175_B"><input type="radio" name="q175" value="B"> B. Lividity</label><br>
+        <label id="label_175_C"><input type="radio" name="q175" value="C"> C. Putrefaction</label><br>
+        <label id="label_175_D"><input type="radio" name="q175" value="D"> D. Decomp</label><br>
+        <button onclick="checkAnswer('175', 'B')">Check Answer</button>
+        <div id="exp175" class="explanation">Correct answer: B</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 176:</strong> Crime scenes should have:</p>
+        <label id="label_176_A"><input type="radio" name="q176" value="A"> A. Defined entry/exit</label><br>
+        <label id="label_176_B"><input type="radio" name="q176" value="B"> B. No perimeter</label><br>
+        <label id="label_176_C"><input type="radio" name="q176" value="C"> C. Multiple suspect paths</label><br>
+        <label id="label_176_D"><input type="radio" name="q176" value="D"> D. Only one investigator</label><br>
+        <button onclick="checkAnswer('176', 'A')">Check Answer</button>
+        <div id="exp176" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 177:</strong> Search method for large outdoor area:</p>
+        <label id="label_177_A"><input type="radio" name="q177" value="A"> A. Spiral</label><br>
+        <label id="label_177_B"><input type="radio" name="q177" value="B"> B. Strip</label><br>
+        <label id="label_177_C"><input type="radio" name="q177" value="C"> C. Grid</label><br>
+        <label id="label_177_D"><input type="radio" name="q177" value="D"> D. Aerial</label><br>
+        <button onclick="checkAnswer('177', 'D')">Check Answer</button>
+        <div id="exp177" class="explanation">Correct answer: D</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 178:</strong> When interviewing injured person:</p>
+        <label id="label_178_A"><input type="radio" name="q178" value="A"> A. Get ID and next of kin</label><br>
+        <label id="label_178_B"><input type="radio" name="q178" value="B"> B. Skip if conscious</label><br>
+        <label id="label_178_C"><input type="radio" name="q178" value="C"> C. Assume medical team will ask</label><br>
+        <label id="label_178_D"><input type="radio" name="q178" value="D"> D. Document but don’t question</label><br>
+        <button onclick="checkAnswer('178', 'A')">Check Answer</button>
+        <div id="exp178" class="explanation">Correct answer: A</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 179:</strong> Show-up IDs must be:</p>
+        <label id="label_179_A"><input type="radio" name="q179" value="A"> A. Suggestive</label><br>
+        <label id="label_179_B"><input type="radio" name="q179" value="B"> B. Coercive</label><br>
+        <label id="label_179_C"><input type="radio" name="q179" value="C"> C. Procedurally neutral</label><br>
+        <label id="label_179_D"><input type="radio" name="q179" value="D"> D. Media documented</label><br>
+        <button onclick="checkAnswer('179', 'C')">Check Answer</button>
+        <div id="exp179" class="explanation">Correct answer: C</div>
+    </div>
+    
+
+    <div class="question-block">
+        <p><strong>Question 180:</strong> A basic crime scene objective is to:</p>
+        <label id="label_180_A"><input type="radio" name="q180" value="A"> A. Establish motive</label><br>
+        <label id="label_180_B"><input type="radio" name="q180" value="B"> B. Locate physical evidence</label><br>
+        <label id="label_180_C"><input type="radio" name="q180" value="C"> C. Clean the scene</label><br>
+        <label id="label_180_D"><input type="radio" name="q180" value="D"> D. Create crime pattern</label><br>
+        <button onclick="checkAnswer('180', 'B')">Check Answer</button>
+        <div id="exp180" class="explanation">Correct answer: B</div>
+    </div>
+    
+</body>
+</html>
